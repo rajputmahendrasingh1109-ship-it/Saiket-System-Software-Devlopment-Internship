@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <div>
+            <span>SOFTWARE DEVELOPMENT PROJECT</span>
+            <h1>Contact Book</h1>
+        </div>
+        <div class="icon">📒</div>
+    </header>
+
+    <section class="form-card">
+
+        <h2>Add New Contact</h2>
+
+        <div class="form-grid">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+            >
+
+            <button onclick="addContact()">
+                + Add Contact
+            </button>
+
+        </div>
+
+        <p id="message"></p>
+
+    </section>
+
+    <section class="contacts-section">
+
+        <div class="section-header">
+            <div>
+                <h2>My Contacts</h2>
+                <span id="contactCount">0 Contacts</span>
+            </div>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 Search by name..."
+                oninput="searchContacts()"
+            >
+        </div>
+
+        <div id="contacts"></div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

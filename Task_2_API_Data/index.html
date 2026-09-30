@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <div class="header">
+        <div>
+            <span class="tag">API PROJECT</span>
+            <h1>Weather Dashboard</h1>
+            <p>Get real-time weather information for any city.</p>
+        </div>
+        <div class="cloud">☁️</div>
+    </div>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter city name..."
+        >
+        <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div id="message"></div>
+
+    <div id="weather" class="weather-card hidden">
+
+        <div class="location">
+            <div>
+                <p class="small">CURRENT WEATHER</p>
+                <h2 id="cityName">City</h2>
+            </div>
+            <div id="weatherIcon">☀️</div>
+        </div>
+
+        <div class="temperature">
+            <span id="temperature">--</span>°C
+        </div>
+
+        <div id="condition" class="condition">
+            Clear
+        </div>
+
+        <div class="details">
+
+            <div class="detail">
+                <span>🌡️</span>
+                <div>
+                    <small>Feels Like</small>
+                    <strong id="feelsLike">--°C</strong>
+                </div>
+            </div>
+
+            <div class="detail">
+                <span>💧</span>
+                <div>
+                    <small>Humidity</small>
+                    <strong id="humidity">--%</strong>
+                </div>
+            </div>
+
+            <div class="detail">
+                <span>💨</span>
+                <div>
+                    <small>Wind Speed</small>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        Built with HTML, CSS, JavaScript & Public Weather API
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
